@@ -1,0 +1,143 @@
+/* General Body and HTML setup - Safe to be global */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- HOMEPAGE ONLY STYLES --- */
+/* The styles below will only apply to the page with <body class="home-page"> */
+
+.home-page {
+  background: #1f2429; /* Fallback background in case image fails */
+}
+
+/* Hero Section */
+.home-page .hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("/images/background.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-page .cover-container {
+  width: 100%;
+  padding: 0rem 0rem 0rem;
+}
+
+/* Text Hierarchy */
+.home-page .hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.home-page .hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 10 auto 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* CTA Button */
+.home-page .btn-secondary {
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #fff;
+  text-shadow: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.home-page .btn-secondary:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar & Header */
+.home-page header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.home-page header > div {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  width: 100%;
+}
+
+.home-page .navbar-brand {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.60rem;
+  text-decoration: none;
+  margin-left: 7vw;
+}
+
+.home-page .nav-masthead {
+  margin-left: auto;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.home-page .nav-link {
+  padding: 0.5rem 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: none;
+  border-radius: 55px;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  padding-right: 2px;
+  margin: 0 0.25rem;
+}
+
+/* This rule seems to be unused but I've scoped it just in case */
+.home-page .nav-link-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+.home-page .nav-link:hover, .home-page .nav-link.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-page .hero h1 {
+    font-size: 2.5rem;
+  }
+  .home-page .hero p {
+    font-size: 1rem;
+  }
+  .home-page header {
+    padding: 1rem;
+  }
+}
