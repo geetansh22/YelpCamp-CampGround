@@ -1,0 +1,32 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">YelpCamp</a>
+
+    <!-- Hamburger toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <!-- Left links -->
+      <div class="navbar-nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/campgrounds">Campgrounds</a>
+        <a class="nav-link" href="/campgrounds/new">Add New</a>
+      </div>
+
+      <!-- Right links (auth) -->
+      <div class="navbar-nav ms-auto">
+        <% if (!currentUser) { %>
+          <a class="nav-link" href="/register">Sign Up</a>
+          <a class="nav-link" href="/login">Sign In</a>
+        <% } else { %>
+          <a class="nav-link" href="/logout">Sign Out</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

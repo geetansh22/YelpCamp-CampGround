@@ -1,0 +1,489 @@
+/* ======================== MAPS ======================== */
+#cluster-map {
+  width: 100%;
+  height: 500px;
+}
+
+.mapbox-container {
+  width: 100%;
+  height: 350px;  /* default desktop height */
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+  .mapbox-container {
+    height: 250px;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  .mapbox-container {
+    height: 180px;
+  }
+}
+
+.mapboxgl-popup-content {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #111;            /* Dark text */
+    background-color: #fff;  /* White background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    max-width: 250px;       /* Optional: wrap long text */
+}
+
+.mapboxgl-popup-content a {
+    color: #007bff;          /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mapboxgl-popup-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* ======================== CAROUSEL ======================== */
+.carousel-item img {
+  width: 100%;
+  height: auto;  /* keep aspect ratio */
+  max-height: 300px;  /* limit height on large screens */
+  object-fit: cover;  /* crop nicely if taller */
+  border-radius: 10px; /* subtle rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+  .carousel-item img {
+    max-height: 220px;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  .carousel-item img {
+    max-height: 160px;
+  }
+}
+
+/* ======================== GENERAL ======================== */
+.container {
+  background: transparent !important; /* let body background show through */
+}
+
+/* ======================== CARD STYLING ======================== */
+.card {
+  border: none;
+  background-color: #2c2c2c; /* slightly lighter than body */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ======================== BUTTONS ======================== */
+.btn-primary {
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #3a6b35, #2f552a);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2f552a, #254421);
+  box-shadow: 0 6px 16px rgba(58, 107, 53, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+}
+
+/* ======================== TYPOGRAPHY ======================== */
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  color: #d1f0d1;
+}
+
+p, a, li, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url("/images/background.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+  color: #7ecb7e;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a8e6a3;
+}
+
+/* ======================== NAVBAR ======================== */
+.navbar {
+  background: rgba(25, 25, 25, 0.7); /* semi-transparent for frosted effect */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  transition: background 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(25, 25, 25, 0.9);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #f5f5f5 !important;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #00bfff !important;
+}
+
+.nav-link {
+  color: #d1d1d1 !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 6px #00bfff;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.nav-link.active {
+  color: #00bfff !important;
+  text-shadow: 0 0 8px #00bfff;
+}
+
+/* ======================== SHOW PAGE ENHANCEMENTS ======================== */
+.show-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.review-card {
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+}
+
+.review-card h5 {
+  color: #00bfff;
+  margin-bottom: 6px;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.review-card .btn {
+  margin-top: 6px;
+}
+
+/* ======================== METADATA ======================== */
+.campground-meta {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    font-weight: 500;
+    display: inline-block;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.campground-meta a {
+    color: #4fc3f7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.campground-meta a:hover {
+    color: #81d4fa;
+    text-decoration: underline;
+}
+
+.price-tag {
+    color: #4cafef;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ======================== REVIEW BOX ======================== */
+.review-box textarea {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.6rem;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.review-box textarea:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #4fc3f7;
+    outline: none;
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.4);
+}
+
+@media (max-width: 768px) {
+  .show-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reviews-container {
+    max-height: 600px; /* Or whatever height you prefer */
+    overflow-y: auto;  /* Adds a scrollbar ONLY when content exceeds max-height */
+    padding-right: 10px; /* Adds some space for the scrollbar */
+}
+
+/* Optional: Style the scrollbar to match your dark theme */
+.reviews-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reviews-container::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 4px;
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* ======================== EDIT PAGE ======================== */
+.edit-camp-form .form-control {
+    border-radius: 8px;
+    background-color: #2c2c2c92;
+    color: #f0f0f0; /* brighter text for readability */
+    border: 1px solid #555;
+}
+
+.edit-camp-form .form-control:focus {
+    background-color: #3a3a3a;
+    border-color: #28a745; /* green focus */
+    box-shadow: 0 0 8px rgba(40,167,69,0.7);
+    outline: none;
+    color: #fff;
+}
+
+.edit-camp-form .form-label {
+    font-weight: 500;
+    color: #ddd;
+}
+
+/* ======================== IMAGE PREVIEW ======================== */
+.image-preview.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.image-preview.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.image-preview .form-check {
+    display: none;
+}
+
+.image-preview.card:hover .form-check {
+    display: block;
+}
+
+.image-preview .card-body {
+    padding: 0.3rem;
+}
+
+/* ======================== RESPONSIVE FLEX ======================== */
+.d-flex.flex-wrap.gap-2 {
+    justify-content: start;
+}
+
+/* ======================== NEW CAMPGROUND FORM ======================== */
+.form-card {
+    background-color: #2c2c2c54;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(40, 40, 40, 0.85), rgba(50, 50, 50, 0.7));
+    z-index: -1;
+    filter: blur(12px);
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.form-card:hover::before {
+    filter: blur(14px);
+    opacity: 0.95;
+}
+
+.form-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+.form-title {
+    font-family: 'Merriweather', serif;
+    color: #d1f0d1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #ddd;
+}
+
+/* ======================== FORM INPUTS ======================== */
+.form-input {
+    border-radius: 8px;
+    background-color: #333;
+    color: #f0f0f0; /* brighter text */
+    border: 1px solid #555;
+    padding: 0.5rem 0.75rem;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.form-input::placeholder {
+    color: #bbb;
+    opacity: 1;
+}
+
+.form-input:focus {
+    background-color: #3a3a3a;
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40,167,69,0.7);
+    color: #fff;
+    outline: none;
+}
+
+.form-input[type="file"] {
+    padding: 0.4rem;
+}
+
+/* ======================== SUBMIT BUTTON ======================== */
+.form-submit {
+    background: linear-gradient(135deg, #3a6b35, #2f552a);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+    background: linear-gradient(135deg, #2f552a, #254421);
+    box-shadow: 0 6px 16px rgba(58,107,53,0.4);
+    transform: translateY(-2px);
+}
+
+.link-back {
+    display: block;
+    margin-top: 1rem;
+    color: #7ecb7e;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.link-back:hover {
+    color: #a8e6a3;
+    text-decoration: underline;
+}
